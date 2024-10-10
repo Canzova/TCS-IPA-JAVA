@@ -16,11 +16,16 @@ class Operators {
         int ans = 0;
         int pow = 0;
         Collections.reverse(arr);
-        for (Integer bit : arr) {
-            if (bit != 0)
-                ans += power(2, pow) * bit;
 
-            pow++;
+        for (Integer bit : arr) {
+
+            if (pow == 0) {
+                ans += 1 * bit;
+                pow = 1;
+            } else {
+                ans += 2 * pow * bit;
+                pow = pow * 2;
+            }
         }
 
         return ans;
