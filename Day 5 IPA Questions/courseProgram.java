@@ -77,12 +77,9 @@ public class courseProgram {
         // Create a new array that excludes null elements for sorting
         Course[] filteredAns = Arrays.copyOfRange(ans, 0, index);
 
-        // Sort the filteredAns array based on the 'handson' value
-        Arrays.sort(filteredAns, new Comparator<Course>() {
-            @Override
-            public int compare(Course c1, Course c2) {
-                return Integer.compare(c1.getHandson(), c2.getHandson()); // Sort by 'handson' value in ascending order
-            }
+        // Sort the filteredAns array using lambda expression
+        Arrays.sort(filteredAns, (c1, c2) -> {
+            return c1.getHandson() - c2.getHandson();
         });
 
         return filteredAns;
