@@ -1,3 +1,4 @@
+
 import bank.Accounts;
 
 public class Main {
@@ -7,9 +8,7 @@ public class Main {
         String name = a1.getName();
         System.out.println(name);
 
-
         SubClass.greet();
     }
 
-    
 }
