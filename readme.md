@@ -1,7 +1,3 @@
-Here's the updated README file with the new information about preparing for the TCS IPA examination:
-
----
-
 # 🌟 Java Learning Repository 🚀
 
 Welcome to my **Java Learning Repository**! 🎉 This repository is dedicated to my journey of learning Java in preparation for the **TCS IPA Examination 2024** through Shraddha Khapra's YouTube channel, **Apna College**. 📚 Here, you'll find my code organized by day, showcasing the concepts and skills I acquire throughout this exciting adventure!
