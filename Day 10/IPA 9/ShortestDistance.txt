@@ -1,0 +1,24 @@
+Problem Statement:
+
+You are given the coordinates of two points in a 2D plane. The task is to calculate the Euclidean distance between these two points and print the result formatted to three decimal places.
+
+ Input:
+- The first line contains two integers, x1 and y1, representing the coordinates of the first point.
+- The second line contains two integers, x2 and y2, representing the coordinates of the second point.
+
+ Output:
+- Output the Euclidean distance between the two points, formatted to three decimal places.
+
+ Constraints:
+- -1000 <= x1, y1, x2, y2 <= 1000
+
+ Example:
+Input:
+
+1 2
+4 6
+
+
+Output:
+
+5.000

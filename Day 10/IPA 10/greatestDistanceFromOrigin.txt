@@ -1,0 +1,41 @@
+Question:
+
+You are given three points in a 2D plane. Each point has an x and y coordinate. Your task is to determine which point has the greatest Euclidean distance from the origin (0, 0) and print its coordinates.
+
+ Input Format:
+- The input consists of six floating-point numbers:
+  - The first two numbers represent the x and y coordinates of the first point (p1).
+  - The next two numbers represent the x and y coordinates of the second point (p2).
+  - The last two numbers represent the x and y coordinates of the third point (p3).
+
+ Output Format:
+- Print the x and y coordinates of the point that has the greatest distance from the origin.
+
+ Euclidean Distance Formula:
+The Euclidean distance d of a point (x, y) from the origin (0, 0) is calculated as:
+d = sqrt{x^2 + y^2} 
+
+ Constraints:
+- All coordinate values are real numbers.
+  
+ Example:
+
+ Input:
+
+1.0 1.0
+2.0 2.0
+3.0 3.0
+
+
+ Output:
+
+3.0
+3.0
+
+
+ Explanation:
+- The distance of point (1.0, 1.0) from the origin is approximately 1.414.
+- The distance of point (2.0, 2.0) from the origin is approximately 2.828.
+- The distance of point (3.0, 3.0) from the origin is approximately 4.242.
+
+Since the third point (3.0, 3.0) is the farthest from the origin, its coordinates are printed.
