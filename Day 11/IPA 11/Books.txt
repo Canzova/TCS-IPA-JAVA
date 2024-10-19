@@ -1,0 +1,67 @@
+Question Statement:
+
+Write a Java program to manage information about books using object-oriented programming principles. You are required to create a class Book with the following attributes and methods:
+
+ Class: Book
+- Attributes:
+  - id (int): A unique identifier for each book.
+  - title (String): The title of the book.
+  - author (String): The author of the book.
+  - price (double): The price of the book.
+  
+- Constructor: Create a parameterized constructor that initializes the id, title, author, and price of the book.
+
+- Methods:
+  - getId(): Returns the id of the book.
+  - getTitle(): Returns the title of the book.
+  - getAuthor(): Returns the author of the book.
+  - getPrice(): Returns the price of the book.
+
+You also need to write a method sortBooksByprice that accepts an array of Book objects and sorts them in ascending order based on their price using a lambda expression. The sorted array should be returned.
+
+ Input:
+- First, input details of 4 books (book ID, title, author, and price) in sequence.
+- Each book's information is provided in the following order:
+  - Book ID (integer)
+  - Book title (string)
+  - Book author (string)
+  - Book price (double)
+
+ Output:
+- After sorting the books by their price in ascending order, output the details of the sorted books, including the ID, title, author, and price.
+
+ Example:
+
+Input:
+
+101
+The Alchemist
+Paulo Coelho
+499.99
+102
+1984
+George Orwell
+299.99
+103
+Harry Potter
+J.K. Rowling
+999.99
+104
+To Kill a Mockingbird
+Harper Lee
+399.99
+
+
+Output:
+
+102 1984 George Orwell 299.99
+104 To Kill a Mockingbird Harper Lee 399.99
+101 The Alchemist Paulo Coelho 499.99
+103 Harry Potter J.K. Rowling 999.99
+
+
+ Requirements:
+- Use an array to store the Book objects.
+- Utilize a lambda expression to define the custom sorting logic based on the price.
+- Implement getter methods for each attribute in the Book class.
+

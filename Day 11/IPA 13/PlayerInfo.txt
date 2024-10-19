@@ -1,0 +1,84 @@
+Question Statement:
+
+Write a Java program to manage player information in a sports context using object-oriented programming principles. You are required to create a class Player with the following attributes and methods:
+
+ Class: Player
+- Attributes:
+  - playerId (int): A unique identifier for each player.
+  - playerName (String): The name of the player.
+  - runs (int): The number of runs scored by the player.
+  - playerType (String): The type of the player (e.g., batsman, bowler).
+  - matchType (String): The type of match in which the player participates (e.g., T20, ODI).
+
+- Constructor: Create a parameterized constructor that initializes the playerId, playerName, runs, playerType, and matchType of the player.
+
+- Methods:
+  - getPlayerId(): Returns the playerId of the player.
+  - getPlayerType(): Returns the playerType of the player.
+  - getMatchType(): Returns the matchType of the player.
+  - getRuns(): Returns the number of runs scored by the player.
+
+You also need to implement the following functionalities:
+
+1. Find Player with Lowest Runs: 
+   - Create a method findPlayerWithLowestRuns that accepts an array of Player objects and a playerType. It should return the minimum number of runs scored by players of the specified type. If no players of that type exist, return 0.
+
+2. Find Players by Match Type: 
+   - Create a method findPlayerByMatchType that accepts an array of Player objects and a matchType. It should return an array of Player objects that match the specified match type. If no players exist for the given match type, return null. The returned players should be sorted in descending order based on their playerId.
+
+ Input:
+- First, input details of 4 players (player ID, name, runs, player type, match type) in sequence.
+- Each player's information is provided in the following order:
+  - Player ID (integer)
+  - Player Name (string)
+  - Runs (integer)
+  - Player Type (string)
+  - Match Type (string)
+
+- After entering the player details, input:
+  - A specific player type (string).
+  - A specific match type (string).
+
+ Output:
+- First, output the minimum number of runs scored by the specified player type. If no such player exists, output "No such player".
+- Next, output the IDs of the players who play the specified match type. If no players exist with the given match type, output "No Player with given matchType".
+
+ Example:
+
+Input:
+
+1
+John Doe
+50
+Batsman
+T20
+2
+Jane Smith
+30
+Bowler
+ODI
+3
+Jim Brown
+20
+Batsman
+T20
+4
+Jake White
+60
+Batsman
+ODI
+Batsman
+ODI
+
+
+Output:
+
+20
+4
+3
+
+
+ Requirements:
+- Use an array to store the Player objects.
+- Implement the specified methods to find the player with the lowest runs and players by match type.
+- Use a lambda expression to define the sorting logic based on the playerId.
