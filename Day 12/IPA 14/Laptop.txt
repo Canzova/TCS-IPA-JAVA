@@ -1,0 +1,202 @@
+Question:
+
+Develop a Java program that performs the following tasks:
+
+1. Define a class named Laptop with the following private attributes:
+   - int laptopId
+   - String brand
+   - String osType
+   - double price
+   - int rating
+
+   Provide appropriate getters for laptopId, brand, osType, and rating, and a constructor to initialize all attributes.
+
+2. In the main method, inside public class named as MyClass:
+   - Accept input for 4 Laptop objects. For each laptop, read the following details:
+     - laptopId (integer)
+     - brand (string)
+     - osType (string)
+     - price (double)
+     - rating (integer)
+   - After reading the details, input a brand and an osType to search.
+
+3. Implement two static methods:
+   - public static int countOfLaptopsByBrand(Laptop[] arr, String brand)
+     - This method should return the count of laptops in the array arr that match the given brand (case-insensitive) and have a rating greater than 3.
+   - public static Laptop[] searchLaptopByOsType(Laptop[] arr, String osType)
+     - This method should return an array of laptops that match the given osType (case-insensitive). The returned array should be sorted in descending order of laptopId.
+     - If no laptops are found matching the osType, return null.
+
+4. In the main method, perform the following:
+   - Call countOfLaptopsByBrand and print the count. If the count is zero, print "The given brand is not available".
+   - Call searchLaptopByOsType and print the laptopId and rating of each laptop found. If no laptops are found, print "The given os is not available".
+
+---
+
+ Class and Method Details:
+
+- Class Name: Laptop
+  - Attributes:
+    - laptopId (int): Unique identifier for the laptop.
+    - brand (String): Brand name of the laptop.
+    - osType (String): Operating system type (e.g., Windows, macOS).
+    - price (double): Price of the laptop.
+    - rating (int): Customer rating of the laptop.
+
+- Methods:
+  - Constructor: Initializes all attributes.
+  - Getters:
+    - getLaptopId(): Returns laptopId.
+    - getBrand(): Returns brand.
+    - getOsType(): Returns osType.
+    - getRating(): Returns rating.
+
+- Static Methods:
+  - countOfLaptopsByBrand(Laptop[] arr, String brand): Counts laptops matching the brand with a rating above 3.
+  - searchLaptopByOsType(Laptop[] arr, String osType): Finds and sorts laptops matching the osType.
+
+---
+
+ Input Format:
+
+For each of the 4 laptops:
+
+<int>       // laptopId
+<String>    // brand
+<String>    // osType
+<double>    // price
+<int>       // rating
+
+After entering laptop details:
+
+<String>    // brand to search
+<String>    // osType to search
+
+
+ Sample Input:
+
+
+101
+Dell
+Windows
+800.50
+4
+102
+HP
+Windows
+750.00
+5
+103
+Apple
+macOS
+1200.00
+5
+104
+Lenovo
+Linux
+650.75
+3
+Dell
+Windows
+
+
+ Expected Output:
+
+
+1
+102
+5
+101
+4
+
+
+---
+
+ Explanation:
+
+- First Part: Counting laptops by brand "Dell" with a rating greater than 3.
+  - Only one laptop (laptopId 101) matches.
+  - Output: 1
+
+- Second Part: Searching laptops by osType "Windows".
+  - Two laptops match (laptopId 101 and 102).
+  - They are sorted in descending order of laptopId.
+  - Output:
+    
+    102
+    5
+    101
+    4
+    
+
+---
+
+ Detailed Breakdown:
+
+ Class Laptop:
+
+- Purpose: Represents a laptop with specific attributes.
+- Attributes:
+  - laptopId: Unique ID of the laptop.
+  - brand: Brand name (e.g., Dell, HP).
+  - osType: Operating system (e.g., Windows, macOS).
+  - price: Price of the laptop.
+  - rating: Customer rating (e.g., from 1 to 5).
+
+ Methods:
+
+- Constructor:
+  - Initializes the Laptop object with provided values.
+
+- Getters:
+  - getLaptopId(): Returns the laptop's ID.
+  - getBrand(): Returns the brand name.
+  - getOsType(): Returns the operating system type.
+  - getRating(): Returns the customer rating.
+
+- Static Methods:
+
+  1. countOfLaptopsByBrand(Laptop[] arr, String brand)
+     - Functionality:
+       - Iterates over the array arr.
+       - Compares each laptop's brand (case-insensitive) with the given brand.
+       - Checks if the rating is greater than 3.
+       - Increments a count if conditions are met.
+     - Returns:
+       - The total count of matching laptops.
+
+  2. searchLaptopByOsType(Laptop[] arr, String osType)
+     - Functionality:
+       - Searches for laptops with the specified osType (case-insensitive).
+       - Adds matching laptops to a temporary list.
+       - Sorts the list in descending order of laptopId.
+       - Converts the list to an array.
+     - Returns:
+       - An array of matching Laptop objects.
+       - null if no laptops are found.
+
+ Main Method Workflow:
+
+1. Data Input:
+   - Reads details for 4 laptops.
+   - Stores them in an array of Laptop objects.
+
+2. Brand and OS Input:
+   - Reads a brand and an osType to search for.
+
+3. Processing:
+   - Calls countOfLaptopsByBrand to get the count of laptops matching the brand with rating > 3.
+     - Prints the count or an appropriate message.
+   - Calls searchLaptopByOsType to get an array of laptops matching the osType.
+     - Prints laptopId and rating for each laptop or an appropriate message.
+
+---
+
+ Note on Case Insensitivity:
+
+- Comparisons for brand and osType are done using equalsIgnoreCase() to ensure that the search is case-insensitive.
+
+ Exception Handling:
+
+- The program assumes valid input is provided.
+- Ensure that the input format is strictly followed to avoid runtime errors.
