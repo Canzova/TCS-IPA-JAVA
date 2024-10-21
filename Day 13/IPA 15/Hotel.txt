@@ -1,0 +1,143 @@
+Question Statement:
+You are tasked with creating a Java program that manages hotel bookings using a Hotel class. The program should allow the user to input details for 4 hotels, including information like booking dates, number of rooms booked, Wi-Fi availability, and total bill. The program will then perform two operations:
+
+
+1.	Calculate the total number of rooms booked in a given month.
+2.	Find the hotel with the second-highest total bill based on Wi-Fi availability.
+
+Below are the specific details of the problem.
+
+Class Description:
+1. Hotel Class:
+•	Attributes:
+o	hotelId: (int) Unique identifier for the hotel.
+o	hotelName: (String) Name of the hotel.
+o	dateOfBooking: (String) Date of booking in the format "dd-MM-yyyy".
+o	noOfRoomsBooked: (int) Number of rooms booked in the hotel.
+o	wifiFacility: (String) Availability of Wi-Fi in the hotel ("Yes" or "No").
+o	totalBill: (double) Total bill for the booking.
+•	Constructor:
+o	Initializes the attributes using values passed as parameters.
+•	Getters:
+o	getHotelId(): Returns the hotel ID.
+o	getHotelName(): Returns the hotel name.
+o	getDateOfBooking(): Returns the date of booking.
+o	getNoOfRoomsBooked(): Returns the number of rooms booked.
+o	getWifiFacility(): Returns whether the hotel has a Wi-Fi facility ("Yes" or "No").
+o	getTotalBill(): Returns the total bill for the booking.
+
+
+2. Main Program (MyClass):
+
+•	This program performs the following tasks:
+o	Reads details of 4 hotels from the user (hotelId, hotelName, dateOfBooking, noOfRoomsBooked, wifiFacility, totalBill).
+o	Prompts the user to input a month (in MM format) and counts how many rooms were booked in that month.
+o	Prompts the user for a Wi-Fi option ("Yes" or "No") and finds the hotel with the  second-highest total bill that matches the Wi-Fi option.
+
+
+Methods in Main Class:
+
+1. noOfRoomsBookedInGivenMonth(Hotel[] arr, String month):
+•	Parameters:
+o	arr: Array of Hotel objects.
+o	month: The month (MM format) for which to check room bookings.
+•	Returns:
+o	The total number of rooms booked in the given month by summing the noOfRoomsBooked attribute of hotels that match the month.
+•	Functionality:
+o	Extracts the month from the dateOfBooking field and compares it with the provided month.
+
+
+2. searchHotelByWifiOption(Hotel[] arr, String wifi):
+•	Parameters:
+o	arr: Array of Hotel objects.
+o	wifi: The Wi-Fi option ("Yes" or "No") to filter hotels.
+•	Returns:
+o	The Hotel object with the second-highest total bill among hotels that match the given Wi-Fi option.
+•	Functionality:
+o	Filters hotels based on the wifiFacility.
+o	Sorts the filtered list by totalBill in ascending order.
+o	Returns the hotel with the second-highest total bill, or null if no hotel matches.
+
+
+Input Details:
+•	The input consists of details for 4 hotels, followed by:
+o	The hotelId (integer)
+o	The hotelName (String)
+o	The dateOfBooking (String in "dd-MM-yyyy" format)
+o	The noOfRoomsBooked (integer)
+o	The wifiFacility (String "Yes" or "No")
+o	The totalBill (double)
+•	After entering hotel details:
+o	A specific month in "MM" format is provided.
+o	A Wi-Fi facility option ("Yes" or "No") is provided.
+
+
+Output:
+1.	The total number of rooms booked in the specified month.
+2.	The hotelId of the hotel with the second-highest total bill for the given Wi-Fi option.
+3.	If no rooms were booked in the given month, print "No rooms booked in the given month".
+4.	If no hotel matches the Wi-Fi option, print "No such option available".
+
+
+Example:
+Input:
+1
+Hotel A
+15-05-2022
+5
+Yes
+2000.0
+2
+Hotel B
+20-05-2022
+10
+No
+3500.0
+3
+Hotel C
+12-06-2022
+7
+Yes
+2500.0
+4
+Hotel D
+18-05-2022
+3
+Yes
+1500.0
+05
+Yes
+Output:
+Copy code
+8
+3
+Input:
+1
+Hotel A
+15-07-2022
+5
+Yes
+2000.0
+2
+Hotel B
+20-08-2022
+10
+No
+3500.0
+3
+Hotel C
+12-07-2022
+7
+Yes
+2500.0
+4
+Hotel D
+18-09-2022
+3
+Yes
+1500.0
+06
+No
+Output:
+No rooms booked in the given month
+No such option available
