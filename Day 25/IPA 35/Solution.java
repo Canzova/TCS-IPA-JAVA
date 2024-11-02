@@ -82,7 +82,8 @@ public class Solution {
             }
         }
 
-        if(num == 0) return 0;
+        if (num == 0)
+            return 0;
         return sum / num;
 
     }
@@ -97,6 +98,10 @@ class Music {
 
     public String getType() {
         return this.type;
+    }
+
+    public int getPlayListNo() {
+        return playListNo;
     }
 
     public int getCount() {
